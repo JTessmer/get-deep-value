@@ -1,0 +1,19 @@
+{
+  "name": "get-deep-value",
+  "version": "1.0.0",
+  "description": "Safely retrieve a Javascrpt value from a nested array and/or object ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JTessmer/get-deep-value.git"
+  },
+  "author": "Jesse Tessmer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JTessmer/get-deep-value/issues"
+  },
+  "homepage": "https://github.com/JTessmer/get-deep-value#readme"
+}
