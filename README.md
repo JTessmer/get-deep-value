@@ -49,7 +49,7 @@ getDeepValue(base, 'my.object.value')               // foo
 
 Or a nested array value:
 ```js
-getDeepValue(base, 'my.object[0].value')            // bar
+getDeepValue(base, 'my.array[0].value')             // bar
 ```
 
 You can also use a dynamic path:
@@ -66,7 +66,7 @@ All of these will safely return `null`:
 getDeepValue(base, 'no.object.value')               // null
 getDeepValue(base, 'my.nonexistant.value')          // null
 getDeepValue(base, 'my.object.nothing')             // null
-getDeepValue(base, 'my.array[1].nothing')           // null
+getDeepValue(base, 'my.array[1].value')             // null
 ```
 
 Optionally, you can specify a fallback value other than `null`:
