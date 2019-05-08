@@ -1,6 +1,10 @@
 module.exports = function getDeepValue(base, path, fallback = null) {
-	const segments = path.replace('[','.').replace(']','').split('.')
 	let curVarScope = base
+
+	const segments = path
+		.replace('[','.').replace(']','')
+		.split('.')
+		.filter(segment => segment.length)
 
 	for (let i = 0; i < segments.length; i++) {
 		if (typeof curVarScope[segments[i]] === 'undefined') return fallback
