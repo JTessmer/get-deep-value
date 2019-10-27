@@ -4,7 +4,7 @@
   "description": "Safely retrieve a Javascrpt value from a nested array and/or object ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nyc mocha"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/JTessmer/get-deep-value/issues"
   },
-  "homepage": "https://github.com/JTessmer/get-deep-value#readme"
+  "homepage": "https://github.com/JTessmer/get-deep-value#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2",
+    "nyc": "^14.1.1"
+  }
 }
