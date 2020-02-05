@@ -9,7 +9,8 @@ const mockShape = {
 	array: [
 		{ value: 'bar' }
 	],
-	number: 3
+	number: 3,
+	empty: null
 }
 
 describe('getDeepValue', () => {
@@ -39,6 +40,12 @@ describe('getDeepValue', () => {
 
 	it('should fail if a non-object is encountered', () => {
 		getDeepValue(mockShape, 'number.nested.value', 'fail')
+			.should
+			.equal('fail')
+	})
+
+	it('should fail if an expected object is null', () => {
+		getDeepValue(mockShape, 'empty.nested', 'fail')
 			.should
 			.equal('fail')
 	})
