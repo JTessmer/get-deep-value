@@ -1,6 +1,6 @@
 {
   "name": "get-deep-value",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Safely retrieve a Javascrpt value from a nested array and/or object ",
   "main": "index.js",
   "scripts": {
