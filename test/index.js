@@ -1,6 +1,6 @@
 const should = require('chai').should()
 
-const getDeepValue = require('../index')
+const getDeepValue = require('../src/index')
 
 const mockShape = {
 	object: {

@@ -2,9 +2,11 @@
   "name": "get-deep-value",
   "version": "1.1.1",
   "description": "Safely retrieve a Javascrpt value from a nested array and/or object ",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "nyc mocha"
+    "test": "nyc mocha",
+    "prebuild": "tsc --emitDeclarationOnly",
+    "build": "babel src --out-dir lib --extensions \".ts\" --source-maps inline"
   },
   "repository": {
     "type": "git",
@@ -17,8 +19,13 @@
   },
   "homepage": "https://github.com/JTessmer/get-deep-value#readme",
   "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-typescript": "^7.9.0",
     "chai": "^4.2.0",
     "mocha": "^6.2.2",
-    "nyc": "^14.1.1"
+    "nyc": "^14.1.1",
+    "typescript": "^3.8.3"
   }
 }

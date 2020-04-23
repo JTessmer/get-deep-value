@@ -1,4 +1,8 @@
-module.exports = function getDeepValue(base, path, fallback = null) {
+export function getDeepValue<T>(
+	base: {} | [],
+	path: string,
+	fallback: T | null = null
+): T | null {
 	let curVarScope = base
 
 	const segments = path
@@ -18,4 +22,6 @@ module.exports = function getDeepValue(base, path, fallback = null) {
 
 		curVarScope = nextVarScope
 	}
+
+	return fallback
 }
