@@ -16,9 +16,9 @@ export function getDeepValue<T>(
 		// This is the target deep value
 		if (i + 1 === segments.length) return nextVarScope
 		// This value is null, but the target is deeper
-		if (i + 1 !== segments.length && nextVarScope === null) return fallback
+		if (i + 1 !== segments.length && nextVarScope === null) break
 		// This value is not an object, but the target is deeper
-		if (typeof nextVarScope !== 'object') return fallback
+		if (typeof nextVarScope !== 'object') break
 
 		curVarScope = nextVarScope
 	}

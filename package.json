@@ -2,11 +2,13 @@
   "name": "get-deep-value",
   "version": "1.1.2",
   "description": "Safely retrieve a Javascrpt value from a nested array and/or object ",
-  "main": "lib/index.js",
+  "main": "index.js",
   "scripts": {
-    "test": "nyc mocha",
-    "prebuild": "tsc --emitDeclarationOnly",
-    "build": "babel src --out-dir lib --extensions \".ts\" --source-maps inline"
+    "test": "nyc ts-mocha --require @babel/register \"./src/**/*.ts\"",
+    "prebuild": "rm -rf lib && tsc --emitDeclarationOnly",
+    "build": "babel src --out-dir lib --extensions \".ts\"",
+    "postbuild": "cp package.json lib",
+    "prepublishOnly": "echo \"Publish must be run from the ./lib folder\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -23,9 +25,14 @@
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.5",
     "@babel/preset-typescript": "^7.9.0",
+    "@babel/register": "^7.10.5",
+    "@istanbuljs/nyc-config-typescript": "^1.0.1",
+    "@types/mocha": "^8.0.0",
+    "babel-preset-minify": "^0.5.1",
     "chai": "^4.2.0",
     "mocha": "^6.2.2",
     "nyc": "^14.1.1",
+    "ts-mocha": "^7.0.0",
     "typescript": "^3.8.3"
   }
 }
