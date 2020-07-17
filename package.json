@@ -7,7 +7,7 @@
     "test": "nyc ts-mocha --require @babel/register \"./src/**/*.ts\"",
     "prebuild": "rm -rf lib && tsc --emitDeclarationOnly",
     "build": "babel src --out-dir lib --extensions \".ts\"",
-    "postbuild": "cp package.json lib",
+    "postbuild": "cp package.json lib && cp README.md lib",
     "prepublishOnly": "echo \"Publish must be run from the ./lib folder\" && exit 1"
   },
   "repository": {
