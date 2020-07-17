@@ -21,18 +21,18 @@
   },
   "homepage": "https://github.com/JTessmer/get-deep-value#readme",
   "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.5",
-    "@babel/preset-typescript": "^7.9.0",
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-typescript": "^7.10.4",
     "@babel/register": "^7.10.5",
     "@istanbuljs/nyc-config-typescript": "^1.0.1",
     "@types/mocha": "^8.0.0",
     "babel-preset-minify": "^0.5.1",
     "chai": "^4.2.0",
-    "mocha": "^6.2.2",
-    "nyc": "^14.1.1",
+    "mocha": "^8.0.1",
+    "nyc": "^15.1.0",
     "ts-mocha": "^7.0.0",
-    "typescript": "^3.8.3"
+    "typescript": "^3.9.7"
   }
 }
